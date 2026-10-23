@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Changelog · DOM Scanner Pro</title>
+<style>:root{color-scheme:light dark;--bg:#ffffff;--fg:#1f2328;--muted:#59636e;--line:#d1d9e0;--accent:#2563eb;--code:#f3f4f6}
+@media (prefers-color-scheme:dark){:root{--bg:#16181d;--fg:#e6e8eb;--muted:#a3abb5;--line:#343a43;--accent:#7aa7ff;--code:#22262d}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+header,main,footer{max-width:46rem;margin:0 auto;padding:0 16px}
+header{display:flex;flex-wrap:wrap;gap:4px 20px;align-items:center;padding-top:20px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+header strong{margin-right:auto;font-size:1.05rem}
+nav{display:flex;flex-wrap:wrap;gap:4px 16px}
+nav a{display:inline-flex;align-items:center;min-height:44px}
+nav a[aria-current="page"]{color:var(--fg);font-weight:600;text-decoration:none}
+main{padding-top:8px;padding-bottom:40px}
+h1{font-size:1.9rem;line-height:1.25;margin:24px 0 12px}
+h2{font-size:1.3rem;margin:32px 0 8px;padding-top:8px;border-top:1px solid var(--line)}
+h3{font-size:1.05rem;margin:24px 0 6px}
+a{color:var(--accent)}
+code{background:var(--code);padding:1px 5px;border-radius:4px;font:0.9em ui-monospace,SFMono-Regular,Menlo,monospace;overflow-wrap:anywhere}
+li{margin:4px 0}
+footer{padding-top:16px;padding-bottom:32px;border-top:1px solid var(--line);color:var(--muted);font-size:0.9rem}
+@media (forced-colors:active){nav a[aria-current="page"]{text-decoration:underline}}</style>
+</head>
+<body>
+<header><strong>DOM Scanner Pro</strong><nav aria-label="Pages"><a href="index.html">Overview</a><a href="help.html">Usage guide</a><a href="privacy.html">Privacy policy</a><a href="support.html">Support</a><a href="changes.html" aria-current="page">Release notes</a></nav></header>
+<main>
+<h1>Changelog</h1>
+<p>All notable changes to DOM Scanner Pro. Versions match the Chrome Web Store package.</p>
+<h2 id="2-0-4-23-october-2026">2.0.4 — 23 October 2026</h2>
+<h3 id="fixed">Fixed</h3>
+<ul><li>Pending saves and imports cannot restore data after Clear all data; concurrent saves enforce the report limit atomically.</li><li>Reopened saved reports retain their draft, original observation context and page address across view changes.</li><li>Fractional screenshot redactions cover both edges completely, including reverse drags.</li><li>Clear all data removes in-memory report drafts and comparison state across open panels.</li><li>Activation and Stop wait for stored sessions to load before changing intent generations.</li><li>Contrast checks require review for gradients over opaque colours and ancestor compositing effects.</li></ul>
+<h2 id="2-0-3-23-october-2026">2.0.3 — 23 October 2026</h2>
+<h3 id="changed">Changed</h3>
+<ul><li>Dropdowns have a clearer arrow with space on the right, a hover state, and long options end with an ellipsis instead of running under the arrow.</li></ul>
+<h2 id="2-0-2-23-october-2026">2.0.2 — 23 October 2026</h2>
+<h3 id="fixed">Fixed</h3>
+<ul><li><strong>How to use</strong>, <strong>Privacy policy</strong> and <strong>Report a problem</strong> in Settings now open the usage guide, privacy policy and support page included in the extension, so they work offline. Previously they pointed to a page the public could not open. Support now goes through the Chrome Web Store listing.</li></ul>
+<h3 id="changed">Changed</h3>
+<ul><li>The usage guide now lists what the extension cannot inspect, and the privacy policy covers clipboard copies and support diagnostics.</li></ul>
+<h2 id="2-0-1-23-october-2026">2.0.1 — 23 October 2026</h2>
+<h3 id="added">Added</h3>
+<ul><li>Focus mode dims everything on the page except the selected element. Turn it on in Settings › Overlay layers or from the command menu.</li><li>Findings you mark &quot;Not an issue&quot; are remembered for that site, so they stay dismissed the next time you scan. Clearing all data in Settings removes them.</li><li>A token file loaded in Review can be saved with a project preset and loaded again later.</li><li>The Selectors card says when the element is inside a frame, and which one.</li></ul>
+<h3 id="changed">Changed</h3>
+<ul><li>Scans hand the browser back to the page more readily, so the page's own animations, timers and typing stay responsive while a scan runs.</li></ul>
+<h2 id="2-0-0-23-october-2026">2.0.0 — 23 October 2026</h2>
+<p>A complete rebuild. The extension keeps its name and store listing, and everything else is new.</p>
+<h3 id="changed">Changed</h3>
+<ul><li>Nothing runs on a page until you click the toolbar icon, press Alt+Shift+D, or allow a site yourself. The old version asked for access to every website and loaded on all of them.</li><li>Inspection now happens in a side panel, with a small overlay on the page. The overlay never restyles the page; pages that react to extra elements switch to panel-only inspection automatically.</li><li>The toolbar badge shows ON only after the page confirms inspection has started. It stays correct after navigation, tab closing, browser restarts of the extension's background worker, and updates.</li></ul>
+<h3 id="added">Added</h3>
+<ul><li>Inspect: size and position with a box-model diagram, typography with font status, flex and grid gaps, image and SVG details, text contrast, validated selectors, filtered computed styles, CSS rule sources, stacking and clipping explanations, and keyboard-only selection.</li><li>Compare: two pinned elements side by side, with measured differences in plain language, CSS to match, and saved snapshots for comparing staging with production.</li><li>Review: horizontal overflow, accessibility rules (axe-core, bundled), contrast, target sizes and labels, focus order walkthrough, design outliers, palette and type boards, CSS variables with token mapping, asset references, layout shift recording, viewport resizing, and checklists.</li><li>Reports: screenshots with permanent redaction, annotations, issue reports with four templates, and Markdown, JSON, PNG and ZIP exports. Saved locally only when you choose.</li><li>Task presets (Inspect, Design review, QA review, Learn), simple and advanced views, light and dark themes, a command menu (Ctrl/⌘ K), and a practice playground that works offline.</li></ul>
+<h3 id="removed">Removed</h3>
+<ul><li>The &quot;Share Feedback&quot; button that appeared on inspected pages. Support is linked from the panel instead.</li></ul>
+<h2 id="1-0-13-march-2025">1.0 — 13 March 2025</h2>
+<ul><li>First Chrome Web Store release: colored element outlines and a hover tooltip shown while holding Ctrl or Command.</li></ul>
+</main>
+<footer>DOM Scanner Pro 2.0.4. Runs locally in Chrome, only on pages you choose.</footer>
+</body>
+</html>

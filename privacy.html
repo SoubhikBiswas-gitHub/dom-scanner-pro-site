@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DOM Scanner Pro privacy policy · DOM Scanner Pro</title>
+<style>:root{color-scheme:light dark;--bg:#ffffff;--fg:#1f2328;--muted:#59636e;--line:#d1d9e0;--accent:#2563eb;--code:#f3f4f6}
+@media (prefers-color-scheme:dark){:root{--bg:#16181d;--fg:#e6e8eb;--muted:#a3abb5;--line:#343a43;--accent:#7aa7ff;--code:#22262d}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif}
+header,main,footer{max-width:46rem;margin:0 auto;padding:0 16px}
+header{display:flex;flex-wrap:wrap;gap:4px 20px;align-items:center;padding-top:20px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+header strong{margin-right:auto;font-size:1.05rem}
+nav{display:flex;flex-wrap:wrap;gap:4px 16px}
+nav a{display:inline-flex;align-items:center;min-height:44px}
+nav a[aria-current="page"]{color:var(--fg);font-weight:600;text-decoration:none}
+main{padding-top:8px;padding-bottom:40px}
+h1{font-size:1.9rem;line-height:1.25;margin:24px 0 12px}
+h2{font-size:1.3rem;margin:32px 0 8px;padding-top:8px;border-top:1px solid var(--line)}
+h3{font-size:1.05rem;margin:24px 0 6px}
+a{color:var(--accent)}
+code{background:var(--code);padding:1px 5px;border-radius:4px;font:0.9em ui-monospace,SFMono-Regular,Menlo,monospace;overflow-wrap:anywhere}
+li{margin:4px 0}
+footer{padding-top:16px;padding-bottom:32px;border-top:1px solid var(--line);color:var(--muted);font-size:0.9rem}
+@media (forced-colors:active){nav a[aria-current="page"]{text-decoration:underline}}</style>
+</head>
+<body>
+<header><strong>DOM Scanner Pro</strong><nav aria-label="Pages"><a href="index.html">Overview</a><a href="help.html">Usage guide</a><a href="privacy.html" aria-current="page">Privacy policy</a><a href="support.html">Support</a><a href="changes.html">Release notes</a></nav></header>
+<main>
+<h1>DOM Scanner Pro privacy policy</h1>
+<p>Last updated: 23 October 2026. Applies to DOM Scanner Pro 2.0 and later.</p>
+<p>DOM Scanner Pro is a developer and design tool that inspects web pages you choose. It works entirely in your browser. The developer does not run any server for it and receives no data from it.</p>
+<h2 id="what-the-extension-reads">What the extension reads</h2>
+<p>When you start inspection on a tab (by clicking the toolbar icon, using its shortcut, or allowing a site), DOM Scanner Pro reads that page's structure, computed styles and layout in your browser in order to show measurements. It reads page text where a feature needs it: a short preview of the selected element in the panel (you can turn this off), accessible names of controls, contrast and accessibility checks, and reference markup when you ask for it. That text stays in the panel's memory unless you choose to save or export it. It never reads form field values or passwords, and it removes text you are editing from reference markup.</p>
+<p>Screenshots are taken only when you choose <strong>Capture</strong>, and only of the visible tab.</p>
+<p>When you choose <strong>Copy</strong> (for example CSS, a selector or diagnostics), the text is placed on your clipboard. Nothing is copied without that action.</p>
+<h2 id="what-it-stores">What it stores</h2>
+<p>Stored locally in your Chrome profile, and only on this device:</p>
+<ul><li><strong>Settings</strong> (theme, preset, overlay options), in extension storage.</li><li><strong>Findings you mark &quot;Not an issue&quot;</strong>, in extension storage, grouped by site (the page's origin) and limited to 500 per site, so they stay dismissed on later scans. Each entry holds the rule, the element's short label and the measured value.</li><li><strong>Saved reports, snapshots, checklists and project presets</strong>, in the extension's local database, only when you choose to save them. Screenshots are saved only after your redactions have been applied to the pixels.</li><li><strong>Temporary session state</strong> (which tabs are being inspected, recent error codes), cleared when the browser closes.</li></ul>
+<p>Nothing is stored in Chrome sync. Local browser storage is not encrypted by the extension; anyone with access to your browser profile could read it.</p>
+<p>You can delete everything at any time in Settings → <strong>Clear all DOM Scanner Pro data</strong>. Removing the extension also removes its stored data.</p>
+<h2 id="what-it-sends">What it sends</h2>
+<p>Nothing. DOM Scanner Pro makes no network requests of its own: no analytics, no crash reporting, no accounts, and no remote code. Its pages run under a content security policy that blocks network requests (<code>connect-src 'none'</code>). The accessibility rules engine (axe-core) is bundled and runs locally with remote loading turned off. Addresses that appear inside measured CSS values (for example background images) have their query strings and fragments removed before they are shown, saved or exported.</p>
+<p>Exports (Markdown, JSON, PNG and ZIP files) are saved through your browser's normal downloads and go only where you put them. By default they exclude the page address, query strings, page text, form values and personal details; you can choose to include the page origin and path.</p>
+<p>The usage guide, this policy and the support page are included in the extension and open from Settings without going online. Links to the Chrome Web Store listing and to accessibility rule help (Deque University) open in a normal browser tab only when you click them.</p>
+<p><strong>Diagnostics for support</strong> are prepared only when you ask, shown to you in full, and copied or downloaded only if you choose. They contain the extension and Chrome versions, the platform, your settings, the state of current inspections (without page addresses), recent error codes, how many sites you have allowed and how much storage is used. They exclude page addresses, page content, screenshots, reports and the names of allowed sites. They are never sent anywhere automatically.</p>
+<h2 id="permissions">Permissions</h2>
+<ul><li><strong>activeTab</strong> and <strong>scripting:</strong> to read the tab you started inspection on, only after you act.</li><li><strong>sidePanel:</strong> to show the workspace.</li><li><strong>storage:</strong> to keep settings and dismissed findings locally.</li><li><strong>Optional site access:</strong> requested only when you choose to allow a site or an embedded frame. You can remove it in Settings → Site access.</li></ul>
+<h2 id="data-sharing-and-sale">Data sharing and sale</h2>
+<p>DOM Scanner Pro does not collect personal data, so it does not sell, share or transfer any. It does not use data for advertising, creditworthiness or any purpose unrelated to inspecting pages.</p>
+<h2 id="changes-and-contact">Changes and contact</h2>
+<p>When this policy changes, the date at the top changes, and the release notes say what changed. Questions: see <a href="support.html">Support</a>.</p>
+</main>
+<footer>DOM Scanner Pro 2.0.4. Runs locally in Chrome, only on pages you choose.</footer>
+</body>
+</html>
